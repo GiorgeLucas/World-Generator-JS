@@ -1,0 +1,56 @@
+:root{
+    --bg_color: #37393A;
+    --red_color: #F25F5C;
+    --red1_color: #F15855;
+    --red2_color: #F04542;
+    --red3_color: #EE332F;
+    --red4_color: #ED201D;
+    
+    --white_color: #F9F7F3;
+    --white1_color: #F1EDE4;
+    
+    --blue_color: #449DD1;
+    --blue_color: #449DD1;
+    --blue_color: #449DD1;
+
+
+    --green_color: #329F5B;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    margin: 30px 30px 0px 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.options{
+    background-color: rgb(49, 49, 49);
+    padding: 10px 0px 10px 0px;
+    margin: 30px 30px 30px 30px;
+    border-radius: 10px 10px 10px 10px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.options > button{
+    margin: 0px 5px 0px 5px;
+    padding: 10px 10px 10px 10px;
+}
+
+.right{
+    padding: 0px 30px 0 30px;
+}
+
+canvas{
+    border: 10px solid rgb(0, 0, 0);
+}
