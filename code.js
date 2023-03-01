@@ -6,6 +6,8 @@ var generateRight = document.getElementById("GenerateRight");
 var downloadMenu = document.getElementById("DownloadMenu");
 var downloadRight = document.getElementById("DownloadRight");
 
+var worldType = document.getElementById("worldTypeSelect");
+
 function BiomColor(val)
 {
     if (val < 0.32)
@@ -133,13 +135,23 @@ function generate()
 
             //h *= 255;
             //ctx.fillStyle = 'rgb(' + h + ', ' + h + ', ' + h  +')';
-
-            let h = normalizedOctave3D_01((x * 0.01), (y * 0.01), (z * 0.01), 8, 0.56) - island(x,y,512,512,128);
+            if (worldTypeSelect.value == "island")
+            {
+                let h = normalizedOctave3D_01((x * 0.01), (y * 0.01), (z * 0.01), 8, 0.56) - island(x,y,512,512,128);
+                ctx.fillStyle = BiomColor(h);
+			    ctx.fillRect(x, y, 1, 1);
+            }
+            else if(worldTypeSelect.value == "big")
+            {
+                let h = normalizedOctave3D_01((x * 0.01), (y * 0.01), (z * 0.01), 8, 0.56);
+                ctx.fillStyle = BiomColor(h);
+			    ctx.fillRect(x, y, 1, 1);  
+            }
+            
             //let h = normalizedOctave3D_01((x * 0.01), (y * 0.01), (z * 0.01), 8, 0.56);
 			//h *= 255;
             //ctx.fillStyle = 'rgb(' + h + ', ' + h + ', ' + h  +')';
-            ctx.fillStyle = BiomColor(h);
-			ctx.fillRect(x, y, 1, 1);
+            
 
         }
     }
