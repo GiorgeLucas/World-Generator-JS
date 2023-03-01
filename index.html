@@ -11,12 +11,14 @@
 </head>
 <body>
     <main>
+        <div class="view_btn fa fa-bars" onclick="changeStatus()">
+        </div>
         <div class="container">
-            <div class="box left">
+            <div class="box left" id="left">
                 <canvas id="ctx" width="512" height="512"></canvas>
                 
             </div>
-            <div class="box right">
+            <div class="box right" id="right">
                 <div class="options">
                     <div class="button fa fa-play" id="Generate"> 
                     </div>
@@ -31,7 +33,22 @@
         </div>
     </main>
     
-    
+    <script>
+        var configBar = document.getElementById("right");
+        function changeStatus() {
+            if (configBar.style.display == "none"){
+                document.getElementById("right").style.display = "block";
+            }
+            else
+            {
+                document.getElementById("right").style.display = "none";
+            }
+        }
+
+        
+
+    </script>
+
     <script src="code.js"></script>
 </body>
 </html>
