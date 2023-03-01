@@ -18,6 +18,12 @@
                 <canvas id="ctx" width="512" height="512"></canvas>
                 
             </div>
+            <div class="menu" id="menu">
+                <div class="button fa fa-play" id="Generate"> 
+                </div>
+                <div class="button fa fa-download" id="Download">
+                </div>
+            </div>
             <div class="box right" id="right">
                 <div class="options">
                     <div class="button fa fa-play" id="Generate"> 
@@ -35,13 +41,16 @@
     
     <script>
         var configBar = document.getElementById("right");
+        var menuBar = document.getElementById("menu");
         function changeStatus() {
             if (configBar.style.display == "none"){
-                document.getElementById("right").style.display = "block";
+                configBar.style.display = "block";
+                menuBar.style.display = "none";
             }
             else
             {
-                document.getElementById("right").style.display = "none";
+                configBar.style.display = "none";
+                menuBar.style.display = "block";
             }
         }
 
