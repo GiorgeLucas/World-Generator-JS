@@ -1,20 +1,30 @@
 :root{
     --bg_color: #37393A;
+    --bg1_color: #313435;
+    --bg2_color: #272A2A;
+
     --red_color: #F25F5C;
     --red1_color: #F15855;
     --red2_color: #F04542;
     --red3_color: #EE332F;
     --red4_color: #ED201D;
     
-    --white_color: #F9F7F3;
-    --white1_color: #F1EDE4;
+    --white_color: #F7F7F7;
+    --white1_color: #E7E7E7;
+    
     
     --blue_color: #449DD1;
-    --blue_color: #449DD1;
-    --blue_color: #449DD1;
+    --blue1_color: #3a99cf;
+    --blue2_color: #308ec5;
+    --blue3_color: #2C82B5;
+    --blue4_color: #2877A4;
 
 
     --green_color: #329F5B;
+    --green1_color: #319B5A;
+    --green2_color: #2C8C51;
+    --green3_color: #277C48;
+    --green4_color: #226D3F;
 }
 
 * {
@@ -24,22 +34,54 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #F5F5F5 ;
+}
+
+canvas{
+    background-color: var(--white1_color);
+    border-radius: 10px 10px 10px 10px;
+    width: 100%;
+    height: 100%;
 }
 
 .container{
     margin: 30px 30px 0px 30px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;  
+    height: 100vh;
+}
+
+.box {
+    width: calc(47% - 10px);
+    height: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.right{
+    
+    background-color: #FFFFFF;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.262);
+}
+
+.content {
+    margin: 20px 20px 20px 20px;
+}
+
+.left{
+    background-color: #FFFFFF;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.262);
 }
 
 .options{
-    background-color: rgb(49, 49, 49);
     padding: 10px 0px 10px 0px;
     margin: 30px 30px 30px 30px;
     border-radius: 10px 10px 10px 10px;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.262);
     display: flex;
     justify-content: center;
-    
 }
 
 .options > button{
@@ -47,10 +89,3 @@ body{
     padding: 10px 10px 10px 10px;
 }
 
-.right{
-    padding: 0px 30px 0 30px;
-}
-
-canvas{
-    border: 10px solid rgb(0, 0, 0);
-}
