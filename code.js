@@ -1,7 +1,10 @@
 var cnvs = document.getElementById("ctx");
 var ctx = cnvs.getContext('2d');
-var generateBtn = document.getElementById("Generate");
-var downloadBtn = document.getElementById("Download");
+var generateMenu = document.getElementById("GenerateMenu");
+var generateRight = document.getElementById("GenerateRight");
+
+var downloadMenu = document.getElementById("DownloadMenu");
+var downloadRight = document.getElementById("DownloadRight");
 
 function BiomColor(val)
 {
@@ -95,14 +98,15 @@ function island(x, y, w, h, r){
     return Math.max(0,1 - mp/ms);
   }
 
-downloadBtn.onclick = () => 
+function download()
 {
     var dataURL = cnvs.toDataURL("image/png");
     var newTab = window.open('about:blank','image from canvas');
     newTab.document.write("<img src='" + dataURL + "' alt='from canvas'/>");
-};
+}
 
-generateBtn.onclick = () => {
+function generate()
+{
     console.log("TEste");
     var maximo = 256;
 
@@ -139,8 +143,40 @@ generateBtn.onclick = () => {
 
         }
     }
-    
+}
+
+downloadMenu.onclick = () => 
+{
+   download();
 };
+
+generateMenu.onclick = () => {
+    generate();
+};
+
+
+downloadRight.onclick = () => 
+{
+   download();
+};
+
+generateRight.onclick = () => {
+    generate();
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

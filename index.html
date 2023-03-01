@@ -11,7 +11,7 @@
 </head>
 <body>
     <main>
-        <div class="view_btn fa fa-bars" onclick="changeStatus()">
+        <div class="view_btn fa fa-cog fa-lg" onclick="changeStatus()">
         </div>
         <div class="container">
             <div class="box left" id="left">
@@ -19,38 +19,60 @@
                 
             </div>
             <div class="menu" id="menu">
-                <div class="button fa fa-play" id="Generate"> 
+                <div class="button fa fa-play" id="GenerateMenu"> 
                 </div>
-                <div class="button fa fa-download" id="Download">
+                <div class="button fa fa-download" id="DownloadMenu">
                 </div>
             </div>
             <div class="box right" id="right">
                 <div class="options">
-                    <div class="button fa fa-play" id="Generate"> 
+                    <div class="button fa fa-play" id="GenerateRight"> 
                     </div>
-                    <div class="button fa fa-download" id="Download">
+                    <div class="button fa fa-download" id="DownloadRight">
                     </div>
                 </div>
                 <div class="content">
                     <h1>Configuration</h1>
                     <hr>
+                    <h2>World Type</h2>
+                    <div class="custom-select">
+                        <select>
+                          <option value="island">Island</option>
+                          <option value="big">Big</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
     
     <script>
+        var canvasE = document.getElementById("ctx");
+        var display = document.getElementById("left");
         var configBar = document.getElementById("right");
         var menuBar = document.getElementById("menu");
         function changeStatus() {
             if (configBar.style.display == "none"){
                 configBar.style.display = "block";
                 menuBar.style.display = "none";
+
+                canvasE.style.borderTopRightRadius = "0px";
+                canvasE.style.borderBottomRightRadius = "0px";
+
+                display.style.borderTopRightRadius = "0px";
+                display.style.borderBottomRightRadius = "0px";
+                
+
             }
             else
             {
                 configBar.style.display = "none";
                 menuBar.style.display = "block";
+                
+                canvasE.style.borderRadius = "10px";
+                display.style.borderRadius = "10px";
+
+                
             }
         }
 
