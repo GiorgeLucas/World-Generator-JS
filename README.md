@@ -11,3 +11,7 @@ You can generate a new island by clicking the play button. Each time you click t
 ### Configuration
 
 You can also adjust the parameters of the island generator by changing the values in the "Configuration" section at the right of the page. 
+
+## License
+
+This project is licensed under the MIT License.
