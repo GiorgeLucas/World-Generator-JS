@@ -4,7 +4,7 @@ This is a JavaScript project that generates random islands using the Perlin Nois
 
 ## How to Use
 
-Access the link: https://nonulldev.github.io/World-Generator-JS/
+Access the link: <https://giorgelucasdev.github.io/World-Generator-JS/>
 
 You can generate a new island by clicking the play button. Each time you click this button, a new random island is generated using different parameters for the Perlin Noise algorithm.
 
